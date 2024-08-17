@@ -1,0 +1,178 @@
+.heading {
+  display: flex;
+  min-height: 400px;
+  width: 90%;
+  max-width: 1125px;
+  margin: 0 auto;
+
+  .web3o {
+    width: 60%;
+    max-width: 733px;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 100%;
+      max-width: 733px;
+      height: 334px;
+      object-fit: cover;
+    }
+    section {
+      display: flex;
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        width: 50%;
+        padding: 24px 0;
+        font-family: "h1";
+      }
+      div {
+        width: 50%;
+      }
+      p {
+        font-size: 1.1rem;
+        padding: 24px 0;
+        line-height: 1.4;
+      }
+      button {
+        padding: 0.8em 2.3em;
+        font-weight: 600;
+        font-size: 1.2rem;
+        border: none;
+        background-color: $Soft-red;
+        transition: $transit;
+        &:hover {
+          background-color: $Very-dark-blue;
+          color: $Off-white;
+        }
+      }
+    }
+  }
+  aside {
+    margin-left: 10px;
+    width: calc(40% - 10px);
+    color: $Off-white;
+    background-color: $Very-dark-blue;
+    padding: 2em 3em;
+    li {
+      padding: 2em 0.3em;
+      cursor: pointer;
+    }
+    ul li:nth-child(2) {
+      border-top: 1px solid $Grayish-blue;
+      border-bottom: 1px solid $Grayish-blue;
+    }
+    h2 {
+      font-size: 2rem;
+      color: $Soft-orange;
+    }
+    h3 {
+      color: $Off-white;
+      padding: 24px 0;
+      transition: $transit;
+      font-family: "h2";
+      &:hover {
+        color: $Soft-orange;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    padding-top: 70px;
+    .web3o {
+      width: 100%;
+
+      section {
+        flex-direction: column;
+        h1 {
+          width: 100%;
+          font-size: 2.5rem;
+        }
+        div {
+          width: 100%;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    aside {
+      width: 100%;
+
+      margin: 24px 0;
+    }
+  }
+}
+.cards {
+  width: 90%;
+  max-width: 1125px;
+  margin: 24px auto;
+  display: flex;
+  .card {
+    width: 33%;
+    padding: 1em;
+    padding-left: 0;
+    display: flex;
+    min-height: 170px;
+
+    margin: 24px 0;
+    .img {
+      height: 100%;
+      width: 40%;
+      max-width: 170px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    section {
+      width: 60%;
+      max-width: 400px;
+      margin: 0;
+      padding: 0;
+      padding-left: 12px;
+    }
+    span {
+      display: block;
+      font-family: "h1";
+      font-weight: 700;
+      color: $Soft-orange;
+      font-size: 2rem;
+      padding: 10px 0;
+    }
+    p {
+      padding: 10px 0;
+    }
+  }
+  @media (max-width: 950px) {
+    flex-direction: column;
+    .card {
+      margin: 24px 0;
+      width: 100%;
+      height: 200px;
+      margin: 0;
+      .img {
+        height: 100%;
+        width: 40%;
+        max-width: 170px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      section {
+        width: 60%;
+        max-width: 400px;
+        margin: 0;
+        padding: 0;
+        padding-left: 12px;
+        p {
+          font-size: 0.89rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
+        span {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

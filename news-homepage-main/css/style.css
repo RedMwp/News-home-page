@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "h1";
+  src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "p";
+  src: url("../assets/fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "h2";
+  src: url("../assets/fonts/static/Inter-Bold.ttf");
+}
+p {
+  font-family: "p";
+  color: hsl(236, 13%, 42%);
+}
+
+h2 {
+  font-family: "h2";
+  color: hsl(240, 100%, 5%);
+}
+
+header {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1125px;
+  margin: 0 auto;
+}
+header nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+  padding: 0.3em 1em;
+  margin-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+header nav a:hover {
+  color: hsl(35, 77%, 62%);
+  transform: translateY(-5px);
+}
+header .menu-icon {
+  height: 40px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.2em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+header .menu-icon span {
+  height: 5px;
+  width: 100%;
+  display: block;
+  background-color: hsl(240, 100%, 5%);
+  transition: all 0.3s ease-in-out;
+}
+.active span:nth-child(2) {
+  width: 0px;
+}
+.active span:nth-child(1) {
+  transform: rotate(40deg) translateY(20px);
+}
+.active span:nth-child(3) {
+  transform: rotate(-40deg) translateY(-18px);
+}
+
+.active:hover {
+  transform: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    position: fixed;
+    left: 0%;
+    top: 0;
+    width: 100vw;
+    padding: 0 10%;
+    height: 60px;
+    background-color: hsl(36, 100%, 99%);
+  }
+  header nav {
+    transition: all 0.3s ease-in-out;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  header nav .menu-icon {
+    display: flex;
+  }
+  header nav ul {
+    display: block;
+    position: fixed;
+    width: 60vw;
+    top: 60px;
+    background-color: hsl(36, 100%, 99%);
+    height: calc(100vh - 60px);
+    padding: 3em 0;
+    right: -200%;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav ul li {
+    margin: 5px 0;
+  }
+  header a {
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 2em 0;
+  }
+  .active-menu {
+    right: 0;
+  }
+}
+.heading {
+  display: flex;
+  min-height: 400px;
+  width: 90%;
+  max-width: 1125px;
+  margin: 0 auto;
+}
+.heading .web3o {
+  width: 60%;
+  max-width: 733px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.heading .web3o img {
+  width: 100%;
+  max-width: 733px;
+  height: 334px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.heading .web3o section {
+  display: flex;
+}
+.heading .web3o section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  width: 50%;
+  padding: 24px 0;
+  font-family: "h1";
+}
+.heading .web3o section div {
+  width: 50%;
+}
+.heading .web3o section p {
+  font-size: 1.1rem;
+  padding: 24px 0;
+  line-height: 1.4;
+}
+.heading .web3o section button {
+  padding: 0.8em 2.3em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  background-color: hsl(5, 85%, 63%);
+  transition: all 0.3s ease-in-out;
+}
+.heading .web3o section button:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+}
+.heading aside {
+  margin-left: 10px;
+  width: calc(40% - 10px);
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(240, 100%, 5%);
+  padding: 2em 3em;
+}
+.heading aside li {
+  padding: 2em 0.3em;
+  cursor: pointer;
+}
+.heading aside ul li:nth-child(2) {
+  border-top: 1px solid hsl(233, 8%, 79%);
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+.heading aside h2 {
+  font-size: 2rem;
+  color: hsl(35, 77%, 62%);
+}
+.heading aside h3 {
+  color: hsl(36, 100%, 99%);
+  padding: 24px 0;
+  transition: all 0.3s ease-in-out;
+  font-family: "h2";
+}
+.heading aside h3:hover {
+  color: hsl(35, 77%, 62%);
+}
+@media (max-width: 800px) {
+  .heading {
+    flex-direction: column;
+    padding-top: 70px;
+  }
+  .heading .web3o {
+    width: 100%;
+  }
+  .heading .web3o section {
+    flex-direction: column;
+  }
+  .heading .web3o section h1 {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .heading .web3o section div {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .heading aside {
+    width: 100%;
+    margin: 24px 0;
+  }
+}
+
+.cards {
+  width: 90%;
+  max-width: 1125px;
+  margin: 24px auto;
+  display: flex;
+}
+.cards .card {
+  width: 33%;
+  padding: 1em;
+  padding-left: 0;
+  display: flex;
+  min-height: 170px;
+  margin: 24px 0;
+}
+.cards .card .img {
+  height: 100%;
+  width: 40%;
+  max-width: 170px;
+}
+.cards .card .img img {
+  width: 100%;
+  height: 100%;
+}
+.cards .card section {
+  width: 60%;
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+}
+.cards .card span {
+  display: block;
+  font-family: "h1";
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  padding: 10px 0;
+}
+.cards .card p {
+  padding: 10px 0;
+}
+@media (max-width: 950px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cards .card {
+    margin: 24px 0;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+  .cards .card .img {
+    height: 100%;
+    width: 40%;
+    max-width: 170px;
+  }
+  .cards .card .img img {
+    width: 100%;
+    height: 100%;
+  }
+  .cards .card section {
+    width: 60%;
+    max-width: 400px;
+    margin: 0;
+    padding: 0;
+    padding-left: 12px;
+  }
+  .cards .card section p {
+    font-size: 0.89rem;
+  }
+  .cards .card section h2 {
+    font-size: 1.2rem;
+  }
+  .cards .card section span {
+    padding-top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
